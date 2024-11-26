@@ -1,0 +1,7 @@
+---
+- name: Install package
+  ansible.builtin.dnf:
+    state: present
+    name:
+      - telnet
+      - epel-release

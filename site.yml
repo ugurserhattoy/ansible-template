@@ -1,0 +1,16 @@
+---
+- name: "-----Ansible-Template-----"
+  hosts: all
+  gather_facts: false # if you need gathering facts change to yes or do it partial
+  become: true
+  serial: 10
+  vars_prompt:
+    - name: ssh_user
+      prompt: "Enter ssh user for inventory"
+      private: false
+    - name: ssh_password
+      prompt: "Enter ssh password for inventory"
+      private: true
+
+  roles:
+    - common

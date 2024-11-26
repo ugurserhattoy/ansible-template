@@ -1,0 +1,9 @@
+---
+- name: Package
+  ansible.builtin.include_tasks: package.yml
+# if tagging needed:
+  #   apply:
+  #     tags:
+  #       - tag
+  # tags:
+  #   - tag
